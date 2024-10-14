@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Arquitectura Bosque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <div class="logo">
+                    <h1 class="nombre-sitio">Arquitectura<span>Bosque</span></h1>
+                </div>
+                <div class="contacto">
+                    <a class="telefono" href="tel:569868668">569868668</a>
+                    <nav class="navegacion">
+                        <a class="link" href="{% url 'index' %}">Inicio</a>
+                        <a class="link" href="{% url 'galeria' %}">Galería</a>
+                        <a class="link" href="{% url 'contacto' %}">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="slogan">
+                <h1>Contáctanos</h1>
+                <p>Estamos aquí para ayudarte</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="contenedor mt-5">
+        <h2>Formulario de Contacto</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Comentario:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer mt-5">
+        <div class="contenedor">
+            <div class="barra">
+                <div class="logo">
+                    <h1 class="nombre-sitio">Arquitectura<span>Bosque</span></h1>
+                </div>
+                <div class="contacto">
+                    <a class="telefono" href="tel:569868668">569868668</a>
+                    <nav class="navegacion">
+                        <a class="link" href="{% url 'index' %}">Inicio</a>
+                        <a class="link" href="{% url 'galeria' %}">Galería</a>
+                        <a class="link" href="{% url 'contacto' %}">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">Todos los derechos reservados &copy; </p>
+    </footer>
+</body>
+</html>
